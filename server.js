@@ -21,10 +21,12 @@ let smurfs = [
     height: '8cm'
   }
 ];
+
+let smurfId = 1;
+
 server.get('/smurfs', (req, res) => {
   res.json(smurfs);
 });
-let smurfId = 1;
 
 server.post('/smurfs', (req, res) => {
   const { name, age, height } = req.body;
@@ -47,7 +49,7 @@ server.post('/smurfs', (req, res) => {
 
   smurfs.push(newSmurf);
   smurfId++;
-  res.json(smurfs);
+  res.json(newSmurf);
 });
 
 server.put('/smurfs/:id', (req, res) => {
