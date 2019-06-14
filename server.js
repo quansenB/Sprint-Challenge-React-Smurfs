@@ -49,7 +49,7 @@ server.post('/smurfs', (req, res) => {
 
   smurfs.push(newSmurf);
   smurfId++;
-  res.json(newSmurf);
+  res.json(smurfs);
 });
 
 server.put('/smurfs/:id', (req, res) => {

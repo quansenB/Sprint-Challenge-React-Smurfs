@@ -40,9 +40,8 @@ class App extends Component {
     this.fetchSmurfs();
   }
 
-  addNewSmurf(nS) {
-    const arrNew = this.state.smurfs.concat(nS);
-    this.setState({ smurfs: arrNew });
+  addNewSmurf(res) {
+    this.setState({ smurfs: res });
   }
 
   // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server
